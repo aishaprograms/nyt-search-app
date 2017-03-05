@@ -13,9 +13,10 @@ var PORT = process.env.PORT || 3000;
 
 // Use morgan and body parser with our app
 app.use(logger("dev"));
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Make public a static directory
 app.use(express.static("public"));
@@ -35,7 +36,7 @@ db.once("open", function () {
 });
 
 // Require the routes in controllers
-require("./controllers/articles_controller.js")(app);
+require("./controllers/articles_controller.js");
 
 
 // Listen on PORT
