@@ -36,8 +36,8 @@ db.once("open", function () {
 });
 
 // Require the routes in controllers
-require("./controllers/articles_controller.js");
-
+var routes = require("./controllers/articles_controller.js");
+app.use('/', routes);
 
 // Listen on PORT
 app.listen(PORT, function () {

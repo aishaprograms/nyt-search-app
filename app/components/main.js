@@ -20,13 +20,23 @@ var Main = React.createClass({
                         <div className="collapse navbar-collapse" id="nyt-search-nav">
                         <ul className="nav navbar-nav">
                             <li><a href="#/search">Search</a></li>
-                            <li><a href="#/results">Results</a></li>
                             <li><a href="#/saved">Saved Articles</a></li>
                         </ul>
                         </div>
                     </div>
                 </nav>
+                <div className="jumbotron">
+                    <div className="container">
+                        <h1>NYT Search</h1>
+                        <blockquote className="pull-right">
+                            <p>Search.</p>
+                            <p>Save.</p>
+                            <p>Repeat.</p>
+                        </blockquote>
+                    </div>
+                </div>
                 <div className="container">
+                    <h2>Click search to get started</h2>
                     {this.props.children}
                 </div>
             </div>
