@@ -25,17 +25,19 @@ var Saved = React.createClass({
     },
     render: function(){
         return(
-            <div className="panel panel-default">
-                <div className="panel-heading">
-                <h3 className="panel-title text-center">Saved Articles</h3>
-                </div>
-                <div className="panel-body">
-                {/* Map function to loop through the array in JSX */}
-                {this.state.saved.map(function(element, i) {
-                    return (
-                        <SavedArticle key={i} id={element._id} url={element.url} title={element.title} date={element.date}/>
-                    );
-                })}
+            <div className="container">
+                <div className="panel panel-default">
+                    <div className="panel-heading">
+                    <h3 className="panel-title text-center">Saved Articles</h3>
+                    </div>
+                    <div className="panel-body">
+                    {/* Map function to loop through the array in JSX */}
+                    {this.state.saved.map(function(element, i) {
+                        return (
+                            <SavedArticle key={i} id={element._id} url={element.url} title={element.title} date={element.date}/>
+                        );
+                    })}
+                    </div>
                 </div>
             </div>
         );

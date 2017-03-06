@@ -27,7 +27,7 @@ var Search = React.createClass({
     },
     render: function(){
         return(
-            <div>
+            <div className="container">
                 <Form setSearch={this.setSearch} />
                 <Results results={this.state.results} />
             </div>
