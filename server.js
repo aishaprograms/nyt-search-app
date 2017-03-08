@@ -26,6 +26,7 @@ var routes = require("./controllers/articles_controller.js");
 app.use('/', routes);
 
 // Database configuration with mongoose
+// heroku
 mongoose.connect("mongodb://heroku_fqx5qqvd:54oahk6ul9l08rafjbsg5fmo0m@ds119370.mlab.com:19370/heroku_fqx5qqvd");
 var db = mongoose.connection;
 
