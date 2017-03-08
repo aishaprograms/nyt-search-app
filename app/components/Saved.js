@@ -23,6 +23,16 @@ var Saved = React.createClass({
             console.log(error);
         });
     },
+    updateSaved: function(){
+        helpers.getSavedArticles().then(function(response) {
+        if (response !== this.state.saved) {
+            this.setState({ saved: response.data });
+        }
+        }.bind(this))
+        .catch(function(error){
+            console.log(error);
+        });
+    },
     render: function(){
         return(
             <div className="container">
@@ -34,9 +44,9 @@ var Saved = React.createClass({
                     {/* Map function to loop through the array in JSX */}
                     {this.state.saved.map(function(element, i) {
                         return (
-                            <SavedArticle key={i} id={element._id} url={element.url} title={element.title} date={element.date}/>
+                            <SavedArticle key={i} id={element._id} url={element.url} title={element.title} date={element.date} updateSaved={this.updateSaved}/>
                         );
-                    })}
+                    }, this)}
                     </div>
                 </div>
             </div>

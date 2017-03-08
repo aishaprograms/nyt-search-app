@@ -10,25 +10,22 @@ var Results = require('./search/Results');
 var Search = React.createClass({
     // initial state
     getInitialState: function() {
-        return { term: "", beginYear:"", endYear:"", results: []};
+        return {results: []};
     },
     // a search term was entered
-    componentDidUpdate: function(){
+    searchArticles: function(term, beginYear, endYear){
         //run the query for the search term
-        helpers.runQuery(this.state.term, this.state.beginYear, this.state.endYear).then(function(response) {
+        helpers.runQuery(term, beginYear, endYear).then(function(response) {
         if (response !== this.state.results) {
             this.setState({results: response.data.response.docs});
         }
         }.bind(this));
-    },
-    // This function allows childrens to update the parent.
-    setSearch: function(searchTerm, searchBegin, searchEnd) {
-        this.setState({ term: searchTerm, beginYear: searchBegin, endYear: searchEnd });
+        this.setState({results:[]});
     },
     render: function(){
         return(
             <div className="container">
-                <Form setSearch={this.setSearch} />
+                <Form searchArticles={this.searchArticles} />
                 <Results results={this.state.results} />
             </div>
         );

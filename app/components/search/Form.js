@@ -26,7 +26,7 @@ var Form = React.createClass({
     // clicking the button
     event.preventDefault();
     // Set the parent to have the search term, begin, end years
-    this.props.setSearch(this.state.term, this.state.beginYear, this.state.endYear);
+    this.props.searchArticles(this.state.term, this.state.beginYear, this.state.endYear);
     this.setState({ term: "", beginYear:"", endYear:""});
   },
   // Here we describe this component's render method
@@ -51,24 +51,34 @@ var Form = React.createClass({
                 className="form-control"
                 id="term"
                 onChange={this.handleTermChange}
+                pattern="[A-Za-z0-9]" 
+                title="Search term of letters and numbers only"
                 required
               />
-              <label htmlFor="beginYear">Start Year</label>
+              <label htmlFor="beginYear">Start Year (YYYY)</label>
               <input
                 value={this.state.beginYear}
-                type="text"
+                type="number"
                 className="form-control"
-                id="term"
+                id="beginYear"
                 onChange={this.handleBeginChange}
+                maxLength="4"
+                min="1900" 
+                max="2017" 
+                step="1" 
                 required
               />
-              <label htmlFor="endYear">End Year</label>
+              <label htmlFor="endYear">End Year (YYYY)</label>
               <input
                 value={this.state.endYear}
-                type="text"
+                type="number"
                 className="form-control"
-                id="term"
+                id="endYear"
                 onChange={this.handleEndChange}
+                maxLength="4"
+                min="1900" 
+                max="2017" 
+                step="1" 
                 required
               />
               <br />

@@ -14,7 +14,7 @@ var Results = React.createClass({
                     {/* Here we use a map function to loop through an array in JSX */}
                     {this.props.results.map(function(element, index) {
                         return (
-                            <Result url={element.web_url} title={element.headline.main} snippet={element.snippet} date={element.pub_date} />
+                            <Result key={index} url={element.web_url} title={element.headline.main} snippet={element.snippet} date={element.pub_date} />
                         );
                     })}
                 </div>
