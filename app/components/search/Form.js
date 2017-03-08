@@ -44,28 +44,7 @@ var Form = React.createClass({
                 This is not necessary but it is convenient.
                 Also note how each has an onChange event associated with our handleChange event.
               */}
-              <label htmlFor="searchTerm">Search</label>
-              <input
-                value={this.state.term}
-                type="text"
-                className="form-control"
-                id="searchTerm"
-                onChange={this.handleTermChange}
-                required
-              />
-              <label htmlFor="beginYear">Start Year (YYYY)</label>
-              <input
-                value={this.state.beginYear}
-                type="number"
-                className="form-control"
-                id="beginYear"
-                onChange={this.handleBeginChange}
-                maxLength="4"
-                min="1900" 
-                max="2017" 
-                step="1" 
-                required
-              />
+              
               <label htmlFor="endYear">End Year (YYYY)</label>
               <input
                 value={this.state.endYear}
