@@ -51,8 +51,6 @@ var Form = React.createClass({
                 className="form-control"
                 id="term"
                 onChange={this.handleTermChange}
-                pattern="[A-Za-z0-9]" 
-                title="Search term of letters and numbers only"
                 required
               />
               <label htmlFor="beginYear">Start Year (YYYY)</label>
