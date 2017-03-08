@@ -44,12 +44,12 @@ var Form = React.createClass({
                 This is not necessary but it is convenient.
                 Also note how each has an onChange event associated with our handleChange event.
               */}
-              <label htmlFor="term">Search</label>
+              <label htmlFor="searchTerm">Search</label>
               <input
                 value={this.state.term}
                 type="text"
                 className="form-control"
-                id="term"
+                id="searchTerm"
                 onChange={this.handleTermChange}
                 required
               />
