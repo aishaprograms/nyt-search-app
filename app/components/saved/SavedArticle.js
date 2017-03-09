@@ -10,6 +10,7 @@ var SavedArticle = React.createClass({
     handleDelete: function(event){
         event.preventDefault();
         helpers.deleteSavedArticles(this.state.id);
+        alert('You deleted an article.');
         this.props.updateSaved();
     },
     componentDidMount: function(){

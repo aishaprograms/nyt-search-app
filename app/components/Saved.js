@@ -34,6 +34,7 @@ var Saved = React.createClass({
         });
     },
     render: function(){
+        const numSaved = (this.state.saved.length);
         return(
             <div className="container">
                 <div className="panel panel-default">
@@ -41,6 +42,11 @@ var Saved = React.createClass({
                     <h3 className="panel-title text-center">Saved Articles</h3>
                     </div>
                     <div className="panel-body">
+                    {numSaved===0 &&
+                        <em>
+                        There are no saved artivles to display. Enter a new search to see some articles that can be saved.
+                        </em>
+                    }
                     {/* Map function to loop through the array in JSX */}
                     {this.state.saved.map(function(element, i) {
                         return (
