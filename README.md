@@ -19,9 +19,6 @@ Visit the Heroku app:
 
 * **NYT Search** - [NYT Search](https://frozen-brook-69554.herokuapp.com/)
 
-## Updates
-02/28/2017: New articles are added to the top of the list instead of the bottom. The list is sorted by object id in a descending order.
-
 ## Understand
 Saved articles are stored on the Mongo database. Each article has a
 - title (Title of the stored article from nytimes.com)
