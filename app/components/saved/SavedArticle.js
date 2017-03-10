@@ -7,6 +7,7 @@ var SavedArticle = React.createClass({
     getInitialState: function(){
         return {url:'', title:'', date: '', id: ''};
     },
+    // Deleted article and shows alert
     handleDelete: function(event){
         event.preventDefault();
         helpers.deleteSavedArticles(this.state.id);

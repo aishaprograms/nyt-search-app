@@ -23,6 +23,7 @@ var Saved = React.createClass({
             console.log(error);
         });
     },
+    // If article gets deleted, updates the articles
     updateSaved: function(){
         helpers.getSavedArticles().then(function(response) {
         if (response !== this.state.saved) {
@@ -49,6 +50,7 @@ var Saved = React.createClass({
                             <h3 className="panel-title text-center">Saved Articles</h3>
                             </div>
                             <div className="panel-body">
+                            {/*If no articles have been saved, display message*/}
                             {numSaved===0 &&
                                 <em>
                                 There are no saved artivles to display. Enter a new search to see some articles that can be saved.

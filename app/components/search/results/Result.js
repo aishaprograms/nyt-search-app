@@ -7,6 +7,7 @@ var Result = React.createClass({
     getInitialState: function(){
         return {url:'', title:'', date: '', snippet: ''};
     },
+    // Saves article and shows alert
     handleSave: function(event){
         event.preventDefault();
         var article = {

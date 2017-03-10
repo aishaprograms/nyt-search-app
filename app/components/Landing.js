@@ -5,6 +5,7 @@ var Landing = React.createClass({
     render: function(){
         return (
             <div>
+                {/*Jumbotron*/}
                 <div className="jumbotron">
                     <div className="container darken">
                         <h1>NYT Search</h1>
@@ -16,6 +17,7 @@ var Landing = React.createClass({
                     </div>
                 </div>
                 <div className="thick-red-hr"></div>
+                {/*Info section*/}
                 <div className="container"> 
                     <h2>Finding <em>New York Times</em> articles made easy</h2>
                     <p>This is simple. Search articles by keywords and their publication year. If you find an article that you like, save it for viewing later.</p>

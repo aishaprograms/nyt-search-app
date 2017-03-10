@@ -5,6 +5,7 @@ var Main = React.createClass({
     render: function(){
         return (
             <div>
+                {/*navigation to different components*/}
                 <nav className="navbar navbar-default">
                     <div className="container-fluid">
                         <div className="navbar-header">
@@ -29,6 +30,7 @@ var Main = React.createClass({
                     {this.props.children}
                 </main>
                 <hr />
+                {/*Extra links and info*/}
                 <footer className="footer">
                     <div className="container">
                         <div className="row">
