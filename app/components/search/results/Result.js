@@ -15,7 +15,12 @@ var Result = React.createClass({
             date: this.state.date
         };
         helpers.addSavedArticles(article);
-        alert('You saved an article!');
+        this.showAlert();
+    },
+    showAlert: function(){
+        var alert = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong> You added an article!</div>';
+        $('#alert-area').append(alert);
+        $(".alert").alert();
     },
     componentDidMount: function(){
         this.setState({url:this.props.url, title:this.props.title, date:this.props.date, snippet:this.props.snippet});

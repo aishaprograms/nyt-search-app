@@ -7,7 +7,7 @@ var Results = React.createClass({
     render: function(){
         const numResults = (this.props.results.length);
         return(
-            <div className="panel panel-default">
+            <div className="panel panel-primary">
                 <div className="panel-heading">
                     <h3 className="panel-title text-center">Results</h3>
                 </div>

@@ -10,8 +10,13 @@ var SavedArticle = React.createClass({
     handleDelete: function(event){
         event.preventDefault();
         helpers.deleteSavedArticles(this.state.id);
-        alert('You deleted an article.');
+        this.showAlert();
         this.props.updateSaved();
+    },
+    showAlert: function(){
+        var alert = '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Done!</strong> You deleted an article!</div>';
+        $('#saved-alert-area').append(alert);
+        $(".alert").alert();
     },
     componentDidMount: function(){
         this.setState({url:this.props.url, title:this.props.title, date:this.props.date, id:this.props.id});
@@ -19,7 +24,7 @@ var SavedArticle = React.createClass({
     render: function(){
         return(
             <div>
-                <button className="btn btn-warning btn-xs pull-right" onClick={this.handleDelete}>Delete</button>
+                <button className="btn btn-danger btn-xs pull-right" onClick={this.handleDelete}>Delete</button>
                 <a href={this.props.url}><p>{this.props.title}</p></a>
                 <hr />
             </div>
