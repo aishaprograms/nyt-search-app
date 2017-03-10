@@ -36,8 +36,8 @@ The higher level React components are the following:
 * **Saved** - displays the Saved Articles that were searched and stored in the database
 
 ## Screenshots
-![Screenshot of search page](/img/search.png)
-![Screenshot of saved page](/img/saved.png)
+![Screenshot of search page](/public/img/search.png)
+![Screenshot of saved page](/public/img/saved.png)
 
 ## Default test (included in package.json file)
 
